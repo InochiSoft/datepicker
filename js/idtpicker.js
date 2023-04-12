@@ -204,7 +204,6 @@ var mktime = function (hour, minute, second, month, day, year) {
 	if (year === void 0) { year = 0; }
 	return new Date(year, month - 1, day, hour, minute, second, 0);
 };
-
 var National = /** @class */ (function () {
 	function National() {
 	}
@@ -222,7 +221,6 @@ var National = /** @class */ (function () {
 	};
 	return National;
 }());
-
 var Islam = /** @class */ (function () {
 	var __spreadArray = (this && this.__spreadArray) || function (to, from, pack) {
 		if (pack || arguments.length === 2) for (var i = 0, l = from.length, ar; i < l; i++) {
@@ -866,7 +864,6 @@ var Islam = /** @class */ (function () {
 	};
 	return Islam;
 }());
-
 var Christian = /** @class */ (function () {
 	function Christian() {
 	}
@@ -922,7 +919,6 @@ var Christian = /** @class */ (function () {
 	};
 	return Christian;
 }());
-
 var Hindu = /** @class */ (function () {
 	function Hindu() {
 	}
@@ -1052,7 +1048,6 @@ var Hindu = /** @class */ (function () {
 	};
 	return Hindu;
 }());
-
 var Buddha = /** @class */ (function () {
 	function Buddha() {
 	}
@@ -1232,7 +1227,6 @@ var Buddha = /** @class */ (function () {
 	};
 	return Buddha;
 }());
-
 var China = /** @class */ (function () {
 	function China() {
 	}
@@ -1427,7 +1421,6 @@ var China = /** @class */ (function () {
 	};
 	return China;
 }());
-
 var Calendar = /** @class */ (function () {
 	function Calendar(options) {
 		this.islam = new Islam();
