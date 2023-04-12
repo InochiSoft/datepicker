@@ -2414,20 +2414,7 @@ var Calendar = /** @class */ (function () {
 							var tday = parseInt(arrdate[2]);
 							var tmonth = parseInt(arrdate[1]);
 							var tyear = parseInt(arrdate[0]);
-							var monthName = "";
-
-							if (type === 0){
-								monthName = arrmonthmasehi[tmonth - 1];
-							} else if (type === 1){
-								monthName = arrmonthhijriyah[tmonth - 1];
-							} else if (type === 2){
-								monthName = arrmonthjawa[tmonth - 1];
-							} else if (type === 3){
-								monthName = arrmonthcandra[tmonth - 1];
-							} else if (type === 4){
-								monthName = arrmonthsurya[tmonth - 1];
-							}
-
+							var monthName = arrmonthmasehi[tmonth - 1];
 							todayCaption = tday + " " + monthName + " " + tyear;
 						}
 					}
