@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Date Picker</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src='js/idtpicker.js'></script>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body style="margin: 50px;">
+<input type="text" id="dtpicker1" name="dtpicker1" />
+<br/>
+<input type="text" id="dtpicker2" name="dtpicker2" />
+<br/>
+<input type="text" id="dtpicker3" name="dtpicker3" />
+<br/>
+<input type="text" id="dtpicker4" name="dtpicker4" />
+<br/>
+
+<script type="text/javascript">
+    $(document).ready(function() {
+        $("#dtpicker1").inochiDTPicker({
+            calendarOptions: {
+                timezone: 7,
+                latitude: -6.9128,
+                longitude: 107.6206,
+                altitude: 10,
+                weeklyFormat: true,
+                include: {
+                    addHolidays: [
+                        {
+                            date: '2023-09-09',
+                            name: 'Ulang Tahun'
+                        }
+                    ],
+                    addLeaves: [
+                        {
+                            date: '2023-09-10',
+                            name: 'birthday',
+                            description: 'Cuti Ulang Tahun'
+                        }
+                    ],
+                    remHolidays: [
+                        {
+                            date: '2023-01-01'
+                        }
+                    ],
+                    remLeaves: [
+                        {
+                            date: '2023-05-05'
+                        }
+                    ],
+                }
+            }
+        });
+        $("#dtpicker2").inochiDTPicker({
+
+        });
+        $("#dtpicker3").inochiDTPicker({
+
+        });
+    });
+</script>
+
+</body>
+</html>
