@@ -1,5 +1,7 @@
 /*
-------------- Create by Agung Novian -----------------------
+------------- Create by Agung Novian ------------------
+------------ pujanggabageur@gmail.com -----------------
+--------- https://kalenderindonesia.com ---------------
 */
 "use strict";
 var intVal = function (mixedVar, base) {
@@ -2369,23 +2371,42 @@ var Calendar = /** @class */ (function () {
 						$('<select>')
 							.addClass('month-select')
 							.css({
-								'width': '100%'
+								'width': '100%',
+								'height': '28px',
+								'margin-bottom': '4px',
+								'border': '0',
+								'font-size': '95%',
+								'background': '#fff'
 							})
 							.attr({
 								'id': 'month-select',
 								'name': 'month-select'
 							});
 
+					monthSelect.attr({
+						'oldbg': '#fff'
+					});
+
 					yearSelect =
 						$('<select>')
 							.addClass('year-select')
 							.css({
-								'width': '100%'
+								'width': '100%',
+								'height': '28px',
+								'margin-bottom': '4px',
+								'border': '0',
+								'font-size': '95%',
+								'margin-left': '4px',
+								'background': '#fff'
 							})
 							.attr({
 								'id': 'year-select',
 								'name': 'year-select'
 							});
+
+					yearSelect.attr({
+						'oldbg': '#fff'
+					});
 
 					for (var m = 0; m < 12; m++){
 						monthSelect.append(new Option(arrmonthmasehi[m], m + 1));
@@ -2396,15 +2417,23 @@ var Calendar = /** @class */ (function () {
 
 					nextMonthButton = $('<button>')
 						.addClass('button-month-next mybutton')
-						.html("&#9658;");
+						.html("&rsaquo;");
 
 					prevMonthButton = $('<button>')
 						.addClass('button-month-prev mybutton')
-						.html("&#9668;");
+						.html("&lsaquo;");
 
 					closeButton = $('<button>')
 						.addClass('button-close mybutton')
 						.html("&#10006;");
+
+					prevMonthButton.attr({
+						'oldbg': '#fff'
+					});
+
+					nextMonthButton.attr({
+						'oldbg': '#fff'
+					});
 
 					var todayCaption = "";
 
@@ -2420,8 +2449,12 @@ var Calendar = /** @class */ (function () {
 					}
 
 					todayButton = $('<button>')
-						.addClass('button-close mybutton')
+						.addClass('button-close todaybutton')
 						.html("&#x2714; Hari ini: " + todayCaption);
+
+					todayButton.attr({
+						'oldbg': '#fff'
+					});
 
 					var row1 = $('<div>')
 						.addClass('row-monthview')
@@ -2469,8 +2502,7 @@ var Calendar = /** @class */ (function () {
 														.addClass('cell-month-select')
 														.css({
 															'display': 'table-cell',
-															'padding':'2px',
-															'max-width': '100px'
+															'max-width': '100px',
 														})
 														.append(monthSelect)
 												)
@@ -2479,8 +2511,7 @@ var Calendar = /** @class */ (function () {
 														.addClass('cell-year-select')
 														.css({
 															'display': 'table-cell',
-															'padding':'2px',
-															'max-width': '90px'
+															'max-width': '90px',
 														})
 														.append(yearSelect)
 												)
@@ -2491,7 +2522,7 @@ var Calendar = /** @class */ (function () {
 															'display': 'table-cell',
 															'padding':'2px',
 															'width': '20px',
-															'text-align' : 'center'
+															'text-align' : 'center',
 														})
 														.append(nextMonthButton)
 												)
@@ -2889,10 +2920,24 @@ var Calendar = /** @class */ (function () {
 				$('.mybutton').css({
 					'background': '#fff',
 					'font-weight': 'bold',
-					'border': 0,
-					'border-radius': '2px 2px 2px 2px',
-					'-moz-border-radius': '2px 2px 2px 2px',
-					'-webkit-border-radius': '2px 2px 2px 2px'
+					'font-size': '125%',
+					'padding': '0',
+					'width': '30px',
+					'height': '30px',
+					'border': '0',
+					'border-radius': '20px 20px 20px 20px',
+					'-moz-border-radius': '20px 20px 20px 20px',
+					'-webkit-border-radius': '20px 20px 20px 20px'
+				});
+
+				$('.todaybutton').css({
+					'background': '#fff',
+					'font-weight': 'bold',
+					'border': '0',
+					'padding': '4px 8px',
+					'border-radius': '20px 20px 20px 20px',
+					'-moz-border-radius': '20px 20px 20px 20px',
+					'-webkit-border-radius': '20px 20px 20px 20px'
 				});
 
 				monthSelect.prop('selectedIndex', month - 1);
@@ -3068,6 +3113,58 @@ var Calendar = /** @class */ (function () {
 					}
 				});
 				$('.cell-daily').on({
+					mouseover: function(){
+						$(this).css({
+							'background': '#eee'
+						});
+					},
+					mouseout: function(){
+						var oldbg = $(this).attr("oldbg");
+						$(this).css({
+							'background': oldbg
+						});
+					},
+				});
+				$('.mybutton').on({
+					mouseover: function(){
+						$(this).css({
+							'background': '#eee'
+						});
+					},
+					mouseout: function(){
+						var oldbg = $(this).attr("oldbg");
+						$(this).css({
+							'background': oldbg
+						});
+					},
+				});
+				monthSelect.on({
+					mouseover: function(){
+						$(this).css({
+							'background': '#eee'
+						});
+					},
+					mouseout: function(){
+						var oldbg = $(this).attr("oldbg");
+						$(this).css({
+							'background': oldbg
+						});
+					},
+				});
+				yearSelect.on({
+					mouseover: function(){
+						$(this).css({
+							'background': '#eee'
+						});
+					},
+					mouseout: function(){
+						var oldbg = $(this).attr("oldbg");
+						$(this).css({
+							'background': oldbg
+						});
+					},
+				});
+				$('.todaybutton').on({
 					mouseover: function(){
 						$(this).css({
 							'background': '#eee'
