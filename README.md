@@ -1,6 +1,11 @@
 # INOCHI DatePicker
 
 JQuery DatePicker Kalender Indonesia dengan tampilan hari libur dan cuti bersama
+
+![ss1][ss1]
+![ss2][ss2]
+![ss3][ss3]
+
 ## Penggunaan
 ```html
 <!DOCTYPE html>
@@ -106,11 +111,8 @@ Bank:
 
 **BCA**: 8105216927
 
-[npm-install-size-image]: https://badgen.net/packagephobia/install/kalender-indonesia
-[npm-install-size-url]: https://packagephobia.com/result?p=kalender-indonesia
-[npm-url]: https://npmjs.org/package/kalender-indonesia
-[npm-version-image]: https://badgen.net/npm/v/kalender-indonesia
-[npm-downloads-image]: https://badgen.net/npm/dm/kalender-indonesia
-[npm-downloads-url]: https://npmcharts.com/compare/kalender-indonesia?minimal=true
 [kalender-indonesia-banner]: https://kalenderindonesia.com/image/big-banner/year/month.png
 [kalender-indonesia-url]: https://kalenderindonesia.com
+[ss1]: https://raw.githubusercontent.com/InochiSoft/datepicker/main/screenshoot/203901.png
+[ss2]: https://raw.githubusercontent.com/InochiSoft/datepicker/main/screenshoot//203910.png
+[ss3]: https://raw.githubusercontent.com/InochiSoft/datepicker/main/screenshoot//204112.png
